@@ -1,8 +1,9 @@
-/* ===========================================
-   國軍 MDM V9.1
+/* ==========================================================
+   國軍 MDM V9.1 Ultra
    style.css V1.0
-   Part 1
-   =========================================== */
+   Part 1 / 8
+   ========================================================== */
+
 
 /* ---------- Reset ---------- */
 
@@ -23,16 +24,16 @@ body{
     width:100%;
     min-height:100vh;
 
+    background:#8BCF5A;
+
+    color:#000;
+
     font-family:
         -apple-system,
         BlinkMacSystemFont,
         "PingFang TC",
         "Microsoft JhengHei",
         sans-serif;
-
-    background:#8CCF5C;
-
-    color:#000;
 
     overflow-x:hidden;
 
@@ -54,9 +55,68 @@ body{
 }
 
 
-/* ---------- Header ---------- */
+/* ---------- Common ---------- */
 
-.header{
+button{
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font:inherit;
+
+    cursor:pointer;
+
+}
+
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+.show{
+
+    display:block !important;
+
+}
+
+
+.no-select{
+
+    user-select:none;
+
+}
+
+
+.transition{
+
+    transition:.25s ease;
+
+}
+
+
+/* ==========================================================
+   Part 2 / 8
+   Header
+   ========================================================== */
+
+/* ---------- Top Bar ---------- */
+
+.topbar{
 
     position:fixed;
 
@@ -78,27 +138,18 @@ body{
 
     z-index:9999;
 
-    user-select:none;
+    padding-left:16px;
+
+    padding-right:16px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
 
 }
 
 
-/* Header Title */
+/* ---------- Menu ---------- */
 
-.header-title{
-
-    font-size:24px;
-
-    font-weight:700;
-
-    letter-spacing:.5px;
-
-}
-
-
-/* Menu */
-
-.menu-btn{
+.menu-button{
 
     position:absolute;
 
@@ -108,16 +159,58 @@ body{
 
     transform:translateY(-50%);
 
-    font-size:28px;
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    background:transparent;
 
     color:#fff;
+
+    font-size:28px;
+
+    font-weight:400;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
     cursor:pointer;
 
 }
 
 
-/* iOS Version */
+/* Menu 點擊效果 */
+
+.menu-button:active{
+
+    opacity:.6;
+
+}
+
+
+/* ---------- App Title ---------- */
+
+.app-title{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    color:#fff;
+
+    white-space:nowrap;
+
+}
+
+
+/* ---------- iOS Version ---------- */
 
 .ios-version{
 
@@ -129,160 +222,98 @@ body{
 
     transform:translateY(-50%);
 
-    font-size:16px;
+    font-size:15px;
 
-    font-weight:400;
+    font-weight:500;
+
+    color:#fff;
+
+    white-space:nowrap;
 
 }
 
 
-/* ---------- Main ---------- */
+/* ---------- Main Container ---------- */
 
-.main{
+.container{
 
     width:100%;
 
     max-width:500px;
 
-    margin:auto;
+    margin:0 auto;
 
-    padding-top:80px;
+    padding-top:78px;
+
+    padding-left:20px;
+
+    padding-right:20px;
 
     padding-bottom:40px;
 
 }
 
 
-/* ---------- Content ---------- */
+/* ---------- Section ---------- */
 
-.content{
+.container section{
+
+    width:100%;
+
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer{
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+   Part 3 / 8
+   Status / Mission / Title / Clock
+   ========================================================== */
+
+/* ---------- 一般模式 ---------- */
+
+.status-section{
 
     width:100%;
 
     text-align:center;
 
+    margin-top:12px;
+
+    min-height:32px;
+
 }
-
-
-/* ---------- Status ---------- */
 
 .status{
 
-    font-size:20px;
+    font-size:22px;
 
     font-weight:500;
 
-    margin-top:18px;
-
-}
-
-
-/* ---------- Hidden ---------- */
-
-.hidden{
-
-    display:none !important;
-
-}
-
-
-/* ---------- Disable Select ---------- */
-
-.no-select{
-
-    user-select:none;
-
-}
-
-
-/* ---------- Transition ---------- */
-
-.transition{
-
-    transition:.25s;
-
-}
-
-/* ===========================================
-   Part 2
-   Title / Clock / Mission
-   =========================================== */
-
-
-/* ---------- 標題區 ---------- */
-
-.title-section{
-
-    margin-top:70px;
-
-    text-align:center;
-
-}
-
-
-/* ---------- 單位名稱 ---------- */
-
-.page-title{
-
-    font-size:108px;
-
-    font-weight:600;
-
-    line-height:1;
-
-    letter-spacing:-2px;
-
     color:#000;
+
+    line-height:1.3;
 
 }
 
 
 /* ---------- 任務模式 ---------- */
 
-.mission-title{
-
-    font-size:108px;
-
-    font-weight:600;
-
-    line-height:1;
-
-    letter-spacing:-2px;
-
-    color:#000;
-
-}
-
-
-/* ---------- 時鐘 ---------- */
-
-.clock{
-
-    margin-top:85px;
-
-    font-size:60px;
-
-    font-weight:700;
-
-    line-height:1;
-
-    color:#000;
-
-}
-
-
-/* ---------- 結束時間 ---------- */
-
 .endtime-section{
 
-    margin-top:35px;
+    width:100%;
 
     text-align:center;
 
+    margin-top:10px;
+
 }
-
-
-/* 標題 */
 
 .endtime-label{
 
@@ -294,74 +325,100 @@ body{
 
 }
 
-
-/* 日期 */
-
 .endtime{
 
-    margin-top:10px;
+    margin-top:8px;
 
-    font-size:52px;
+    font-size:46px;
+
+    font-weight:700;
+
+    line-height:1;
+
+    color:#000;
+
+}
+
+
+/* ---------- 大標題 ---------- */
+
+.title-section{
+
+    width:100%;
+
+    text-align:center;
+
+    margin-top:55px;
+
+}
+
+.page-title{
+
+    font-size:88px;
 
     font-weight:700;
 
     color:#000;
 
-}
+    line-height:1;
 
+    letter-spacing:-2px;
 
-/* ---------- 任務模式才顯示 ---------- */
-
-.endtime-section.hidden{
-
-    display:none;
+    word-break:keep-all;
 
 }
 
 
-/* ---------- 狀態文字 ---------- */
+/* ---------- 時鐘 ---------- */
 
-.status{
+.clock-section{
 
-    margin-top:12px;
+    width:100%;
 
-    font-size:21px;
+    text-align:center;
 
-    font-weight:500;
+    margin-top:65px;
+
+}
+
+.clock{
+
+    font-size:54px;
+
+    font-weight:700;
 
     color:#000;
 
-}
+    line-height:1;
 
-
-/* ---------- 間距 ---------- */
-
-.space-xxl{
-
-    height:40px;
+    letter-spacing:-1px;
 
 }
 
-.space-xl{
 
-    height:28px;
+/* ---------- Normal / Mission 間距 ---------- */
 
-}
+.status-section + .title-section{
 
-.space-lg{
-
-    height:20px;
+    margin-top:55px;
 
 }
 
-.space-md{
+.endtime-section + .title-section{
 
-    height:12px;
+    margin-top:35px;
 
 }
 
-.space-sm{
 
-    height:8px;
+/* ---------- 防止文字被選取 ---------- */
+
+.status,
+.endtime,
+.endtime-label,
+.page-title,
+.clock{
+
+    user-select:none;
 
 }
