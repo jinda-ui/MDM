@@ -556,7 +556,7 @@ img{
 
 }
 
-}/* ---------- Card title ---------- */
+/* ---------- Card title ---------- */
 
 .card-title{
 
@@ -606,7 +606,7 @@ img{
 
     z-index:2;
 
-    margin-top:18px;
+    margin-top:10px;
 
     font-size:44px;
 
@@ -635,9 +635,31 @@ img{
 
     .control-card{
 
-        height:158px;
+    position:relative;
 
-    }
+    width:86%;
+
+    height:200px;
+
+    margin:0 auto;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    border:1px solid rgba(0,0,0,.18);
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
 
     .card-title,
     .card-subtitle{
