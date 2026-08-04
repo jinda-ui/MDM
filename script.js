@@ -72,3 +72,71 @@ function updateIOS(){
 }
 
 updateIOS();
+
+/* ==========================================================
+   DOM
+========================================================== */
+
+const statusSection = document.getElementById("statusSection");
+
+const endTimeSection = document.getElementById("endTimeSection");
+
+const pageTitle = document.getElementById("pageTitle");
+
+const endTimeValue = document.getElementById("endTimeValue");
+
+const serialNumber = document.getElementById("serialNumber");
+
+const lockTime = document.getElementById("lockTime");
+
+const profileVersion = document.getElementById("profileVersion");
+
+const violationSection = document.getElementById("violationSection");
+
+const violationItems = document.getElementById("violationItems");
+
+/* ==========================================================
+   套用設定
+========================================================== */
+
+function loadConfig(){
+
+    pageTitle.textContent = CONFIG.title;
+
+    endTimeValue.textContent = CONFIG.endTime;
+
+    serialNumber.textContent = CONFIG.serial;
+
+    lockTime.textContent = CONFIG.lockTime;
+
+    profileVersion.textContent = CONFIG.profile;
+
+}
+
+loadConfig();
+
+/* ==========================================================
+   模式切換
+========================================================== */
+
+function updateMode(){
+
+    if(CONFIG.mode === "mission"){
+
+        statusSection.classList.add("hidden");
+
+        endTimeSection.classList.remove("hidden");
+
+    }
+
+    else{
+
+        statusSection.classList.remove("hidden");
+
+        endTimeSection.classList.add("hidden");
+
+    }
+
+}
+
+updateMode();
