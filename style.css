@@ -547,17 +547,35 @@ img{
 
     inset:0;
 
-    background-image:url("images/watermark.svg.jpg");
-
-    background-repeat:repeat;
-
-    background-position:center;
-
-    background-size:125px;
-
-    opacity:.45;
-
     pointer-events:none;
+
+    opacity:.28;
+
+    background-image:
+        url("images/watermark.svg.jpg"),
+        url("images/watermark.svg.jpg"),
+        url("images/watermark.svg.jpg"),
+        url("images/watermark.svg.jpg"),
+        url("images/watermark.svg.jpg"),
+        url("images/watermark.svg.jpg");
+
+    background-repeat:no-repeat;
+
+    background-size:
+        62px 62px,
+        62px 62px,
+        62px 62px,
+        62px 62px,
+        62px 62px,
+        62px 62px;
+
+    background-position:
+        left 12px top 12px,
+        center top 12px,
+        right 12px top 12px,
+        left 12px bottom 12px,
+        center bottom 12px,
+        right 12px bottom 12px;
 
 }
 
