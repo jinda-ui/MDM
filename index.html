@@ -272,15 +272,187 @@
 
     </main>
 
+<!-- ==========================================================
+     Admin Panel
+========================================================== -->
 
+<section
+    id="adminPanel"
+    class="admin-panel hidden">
 
-    <!-- Drawer -->
+    <div class="admin-header">
 
-    <aside
-        id="drawer"
-        class="drawer">
+        管理者模式
 
-    </aside>
+    </div>
+
+    <div class="admin-body">
+
+        <!-- 模式 -->
+
+        <label>
+
+            模式
+
+        </label>
+
+        <select id="adminMode">
+
+            <option value="normal">
+
+                一般模式
+
+            </option>
+
+            <option value="mission">
+
+                任務模式
+
+            </option>
+
+        </select>
+
+        <!-- 營區名稱 -->
+
+        <label>
+
+            營區名稱
+
+        </label>
+
+        <input
+            id="adminTitle"
+            type="text"
+            value="中科院">
+
+        <!-- 上鎖時間 -->
+
+        <label>
+
+            上鎖時間
+
+        </label>
+
+        <input
+            id="adminLockTime"
+            type="text"
+            placeholder="115/07/02 10:06:36">
+
+        <!-- 結束時間 -->
+
+        <label>
+
+            結束時間
+
+        </label>
+
+        <input
+            id="adminEndTime"
+            type="text"
+            placeholder="115/08/14 00:00">
+
+        <!-- 管制標籤第一行 -->
+
+        <label>
+
+            管制標籤第一行
+
+        </label>
+
+        <input
+            id="adminCardTitle"
+            type="text"
+            value="國軍營內民用通信">
+
+        <!-- 管制標籤第二行 -->
+
+        <label>
+
+            管制標籤第二行
+
+        </label>
+
+        <input
+            id="adminCardSubtitle"
+            type="text"
+            value="資訊器材管制標籤">
+
+        <!-- 卡號 -->
+
+        <label>
+
+            卡號
+
+        </label>
+
+        <input
+            id="adminSerial"
+            type="text"
+            value="C228914264">
+
+        <!-- 套用 -->
+
+        <button
+            id="saveAdmin"
+            class="admin-save">
+
+            套用設定
+
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================================
+     Drawer
+========================================================== -->
+
+<aside
+    id="drawer"
+    class="drawer">
+
+    <div class="drawer-header">
+
+        國軍 MDM V9.1
+
+    </div>
+
+    <div class="drawer-menu">
+
+        <div
+            id="drawerHome"
+            class="drawer-item">
+
+            🏠 首頁
+
+        </div>
+
+        <div
+            id="drawerAdmin"
+            class="drawer-item">
+
+            ⚙️ 管理者模式
+
+        </div>
+
+        <div
+            id="drawerAbout"
+            class="drawer-item">
+
+            ℹ️ 關於
+
+        </div>
+
+    </div>
+
+    <div class="drawer-footer">
+
+        Version 9.1 Ultra
+
+    </div>
+
+</aside>
 
 
 
