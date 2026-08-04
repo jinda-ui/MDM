@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-content="width=device-width,initial-scale=1.0">
+content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-<title>國軍 MDM</title>
+<title>國軍 MDM V9.1</title>
 
 <style>
 
@@ -16,34 +16,28 @@ content="width=device-width,initial-scale=1.0">
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:-apple-system,BlinkMacSystemFont;
+font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;
+-webkit-user-select:none;
+user-select:none;
+}
+
+html,body{
+height:100%;
 }
 
 body{
 
-background:#6fd04d;
+background:#73d34f;
+
+overflow-x:hidden;
 
 }
 
-/* 上方 */
+/*==========================
+Header
+===========================*/
 
 .top{
-
-height:70px;
-
-background:#000;
-
-color:white;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:30px;
-
-font-weight:bold;
 
 position:fixed;
 
@@ -53,13 +47,33 @@ left:0;
 
 right:0;
 
+height:72px;
+
+padding-top:env(safe-area-inset-top);
+
+background:#000;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+font-size:25px;
+
+font-weight:700;
+
+z-index:999;
+
 }
 
 .menu{
 
 position:absolute;
 
-left:20px;
+left:18px;
 
 font-size:34px;
 
@@ -71,15 +85,23 @@ cursor:pointer;
 
 position:absolute;
 
-right:20px;
+right:14px;
 
-font-size:20px;
+font-size:18px;
+
+font-weight:500;
 
 }
 
+/*==========================
+Content
+===========================*/
+
 .content{
 
-padding-top:90px;
+padding-top:110px;
+
+padding-bottom:60px;
 
 text-align:center;
 
@@ -87,91 +109,308 @@ text-align:center;
 
 .tip{
 
-font-size:22px;
+font-size:21px;
 
-margin-top:20px;
+margin-top:8px;
+
+font-weight:500;
 
 }
 
 .name{
 
-margin-top:80px;
+font-size:112px;
 
-font-size:120px;
+font-weight:700;
 
-font-weight:bold;
+margin-top:70px;
+
+letter-spacing:2px;
 
 }
 
 .clock{
 
-font-size:60px;
+font-size:72px;
 
-font-weight:bold;
+font-weight:800;
 
-margin-top:80px;
+margin-top:70px;
 
 }
+
+/*==========================
+Buttons
+===========================*/
 
 .btn{
 
-width:85%;
+width:86%;
 
-margin:35px auto;
+height:78px;
 
-padding:22px;
+margin:28px auto;
 
-background:rgba(255,255,255,.35);
-
-border-radius:20px;
-
-font-size:36px;
-
-color:#3c74ff;
-
-}
-
-.card{
-
-width:80%;
-
-background:white;
-
-margin:50px auto;
-
-padding:25px;
+background:rgba(255,255,255,.33);
 
 border-radius:18px;
 
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:35px;
+
+color:#4d73ff;
+
+backdrop-filter:blur(8px);
+
 }
 
-.serial{
+.dot{
 
-font-size:60px;
+width:28px;
 
-font-weight:bold;
+height:28px;
 
-margin-top:20px;
+border-radius:50%;
+
+margin-right:18px;
 
 }
 
-.info{
+.green{
 
-font-size:26px;
+background:#59d33c;
 
-line-height:55px;
-
-margin-top:35px;
+box-shadow:0 0 10px rgba(65,180,40,.8);
 
 }
 
 .red{
 
-color:red;
+background:#ff4545;
 
-font-weight:bold;
+box-shadow:0 0 10px rgba(255,0,0,.5);
 
-font-size:40px;
+}
+
+/*==========================
+Card
+===========================*/
+
+.card{
+
+width:82%;
+
+margin:45px auto;
+
+padding:30px;
+
+background:#fff;
+
+border-radius:16px;
+
+border:2px solid #444;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+opacity:.12;
+
+background-image:
+radial-gradient(circle,#999 2px,transparent 2px);
+
+background-size:95px 95px;
+
+pointer-events:none;
+
+}
+
+.card-title{
+
+position:relative;
+
+z-index:2;
+
+font-size:28px;
+
+line-height:42px;
+
+}
+
+.serial{
+
+position:relative;
+
+z-index:2;
+
+font-size:64px;
+
+font-weight:800;
+
+margin-top:20px;
+
+letter-spacing:2px;
+
+}
+
+/*==========================
+Info
+===========================*/
+
+.info{
+
+font-size:28px;
+
+line-height:65px;
+
+margin-top:10px;
+
+}
+
+.fake{
+
+margin-top:10px;
+
+font-size:30px;
+
+font-weight:700;
+
+color:#e00;
+
+letter-spacing:4px;
+
+}
+
+/*==========================
+Drawer
+===========================*/
+
+.drawer{
+
+position:fixed;
+
+top:0;
+
+left:-280px;
+
+width:280px;
+
+height:100%;
+
+background:white;
+
+box-shadow:5px 0 18px rgba(0,0,0,.35);
+
+transition:.3s;
+
+z-index:1200;
+
+padding-top:90px;
+
+}
+
+.drawer.show{
+
+left:0;
+
+}
+
+.drawer h2{
+
+padding:20px;
+
+font-size:28px;
+
+border-bottom:1px solid #ddd;
+
+}
+
+.drawer a{
+
+display:block;
+
+padding:22px;
+
+font-size:24px;
+
+text-decoration:none;
+
+color:#333;
+
+border-bottom:1px solid #eee;
+
+}
+
+.overlay{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.4);
+
+display:none;
+
+z-index:1100;
+
+}
+
+.overlay.show{
+
+display:block;
+
+}
+
+/*==========================
+Animation
+===========================*/
+
+.btn:active{
+
+transform:scale(.98);
+
+transition:.08s;
+
+}
+
+.card{
+
+animation:fade .4s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
 
 }
 
@@ -181,9 +420,25 @@ font-size:40px;
 
 <body>
 
+<div class="drawer" id="drawer">
+
+<h2>國軍 MDM</h2>
+
+<a href="#">首頁</a>
+
+<a href="#">管理模式</a>
+
+<a href="#">設定資訊</a>
+
+<a href="#">版本資訊</a>
+
+</div>
+
+<div class="overlay" id="overlay"></div>
+
 <div class="top">
 
-<div class="menu">☰</div>
+<div class="menu" id="menu">☰</div>
 
 國軍 MDM V9.1
 
@@ -199,7 +454,7 @@ font-size:40px;
 
 </div>
 
-<div class="name" id="username">
+<div class="name">
 
 中科院
 
@@ -213,19 +468,23 @@ font-size:40px;
 
 <div class="btn">
 
-🟢 上鎖：進入管制模式
+<div class="dot green"></div>
+
+上鎖：進入管制模式
 
 </div>
 
 <div class="btn">
 
-🔴 解鎖：離開管制模式
+<div class="dot red"></div>
+
+解鎖：離開管制模式
 
 </div>
 
 <div class="card">
 
-<div style="font-size:28px;">
+<div class="card-title">
 
 國軍營內民用通信<br>
 
@@ -249,7 +508,7 @@ C228914264
 
 </div>
 
-<div class="red">
+<div class="fake">
 
 仿冒必究
 
@@ -257,37 +516,116 @@ C228914264
 
 </div>
 
+
+
 <script>
 
-document.getElementById("ios").innerHTML=
+//==============================
+// iOS Version
+//==============================
 
-"iOS:"+navigator.userAgent.match(/OS ([0-9_]+)/)?
+const match = navigator.userAgent.match(/OS (\d+[_\d]*)/);
 
-navigator.userAgent.match(/OS ([0-9_]+)/)[1].replaceAll("_","."):"";
+document.getElementById("ios").textContent =
+match ? "iOS:" + match[1].replaceAll("_",".") : "";
 
-function update(){
+//==============================
+// Clock
+//==============================
 
-let d=new Date();
+function updateClock(){
 
-let m=(d.getMonth()+1).toString().padStart(2,"0");
+const d=new Date();
 
-let day=d.getDate().toString().padStart(2,"0");
+const month=String(d.getMonth()+1).padStart(2,"0");
 
-let h=d.getHours().toString().padStart(2,"0");
+const day=String(d.getDate()).padStart(2,"0");
 
-let mm=d.getMinutes().toString().padStart(2,"0");
+const hour=String(d.getHours()).padStart(2,"0");
 
-let s=d.getSeconds().toString().padStart(2,"0");
+const min=String(d.getMinutes()).padStart(2,"0");
 
-document.getElementById("clock").innerHTML=
+const sec=String(d.getSeconds()).padStart(2,"0");
 
-m+"/"+day+" "+h+":"+mm+":"+s;
+document.getElementById("clock").textContent=
+`${month}/${day} ${hour}:${min}:${sec}`;
 
 }
 
-update();
+updateClock();
 
-setInterval(update,1000);
+setInterval(updateClock,1000);
+
+//==============================
+// Drawer
+//==============================
+
+const drawer=document.getElementById("drawer");
+const overlay=document.getElementById("overlay");
+const menu=document.getElementById("menu");
+
+menu.onclick=()=>{
+
+drawer.classList.add("show");
+overlay.classList.add("show");
+
+};
+
+overlay.onclick=()=>{
+
+drawer.classList.remove("show");
+overlay.classList.remove("show");
+
+};
+
+//==============================
+// Button Animation
+//==============================
+
+document.querySelectorAll(".btn").forEach(btn=>{
+
+btn.addEventListener("touchstart",()=>{
+
+btn.style.transform="scale(.97)";
+btn.style.transition=".08s";
+
+});
+
+btn.addEventListener("touchend",()=>{
+
+btn.style.transform="scale(1)";
+
+});
+
+});
+
+//==============================
+// Card Animation
+//==============================
+
+window.addEventListener("load",()=>{
+
+document.querySelector(".card").style.opacity="1";
+
+});
+
+//==============================
+// Optional vibration
+//==============================
+
+document.querySelectorAll(".btn").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+if(navigator.vibrate){
+
+navigator.vibrate(15);
+
+}
+
+});
+
+});
 
 </script>
 
