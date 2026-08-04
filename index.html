@@ -1,127 +1,296 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MDM Dashboard</title>
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>國軍 MDM</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:-apple-system,BlinkMacSystemFont;
 }
 
 body{
-background:#f5f5f5;
+
+background:#6fd04d;
+
 }
 
-header{
-background:#1976d2;
+/* 上方 */
+
+.top{
+
+height:70px;
+
+background:#000;
+
 color:white;
-padding:20px;
-font-size:28px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:30px;
+
 font-weight:bold;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+right:0;
+
 }
 
-.container{
-padding:20px;
+.menu{
+
+position:absolute;
+
+left:20px;
+
+font-size:34px;
+
+cursor:pointer;
+
+}
+
+.version{
+
+position:absolute;
+
+right:20px;
+
+font-size:20px;
+
+}
+
+.content{
+
+padding-top:90px;
+
+text-align:center;
+
+}
+
+.tip{
+
+font-size:22px;
+
+margin-top:20px;
+
+}
+
+.name{
+
+margin-top:80px;
+
+font-size:120px;
+
+font-weight:bold;
+
+}
+
+.clock{
+
+font-size:60px;
+
+font-weight:bold;
+
+margin-top:80px;
+
+}
+
+.btn{
+
+width:85%;
+
+margin:35px auto;
+
+padding:22px;
+
+background:rgba(255,255,255,.35);
+
+border-radius:20px;
+
+font-size:36px;
+
+color:#3c74ff;
+
 }
 
 .card{
+
+width:80%;
+
 background:white;
-padding:20px;
-margin-bottom:15px;
-border-radius:12px;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
+
+margin:50px auto;
+
+padding:25px;
+
+border-radius:18px;
+
 }
 
-table{
-width:100%;
-border-collapse:collapse;
+.serial{
+
+font-size:60px;
+
+font-weight:bold;
+
 margin-top:20px;
-background:white;
-border-radius:12px;
-overflow:hidden;
+
 }
 
-th{
-background:#1976d2;
-color:white;
-padding:12px;
+.info{
+
+font-size:26px;
+
+line-height:55px;
+
+margin-top:35px;
+
 }
 
-td{
-padding:12px;
-border-bottom:1px solid #eee;
-text-align:center;
-}
+.red{
 
-.online{
-color:green;
-font-weight:bold;
-}
-
-.offline{
 color:red;
+
 font-weight:bold;
+
+font-size:40px;
+
 }
+
 </style>
 
 </head>
 
 <body>
 
-<header>
-📱 MDM Dashboard
-</header>
+<div class="top">
 
-<div class="container">
+<div class="menu">☰</div>
 
-<div class="card">
-<h2>設備總數</h2>
-<h1>3</h1>
+國軍 MDM V8.1
+
+<div class="version" id="ios"></div>
+
+</div>
+
+<div class="content">
+
+<div class="tip">
+
+已上鎖，可進入此管制營區
+
+</div>
+
+<div class="name" id="username">
+
+中科院
+
+</div>
+
+<div class="clock" id="clock">
+
+00/00 00:00:00
+
+</div>
+
+<div class="btn">
+
+🟢 上鎖：進入管制模式
+
+</div>
+
+<div class="btn">
+
+🔴 解鎖：離開管制模式
+
 </div>
 
 <div class="card">
-<h2>使用者</h2>
-<h1>3</h1>
-</div>
 
-<table>
+<div style="font-size:28px;">
 
-<tr>
-<th>Device</th>
-<th>User</th>
-<th>Platform</th>
-<th>Status</th>
-</tr>
+國軍營內民用通信<br>
 
-<tr>
-<td>iPhone 15</td>
-<td>Jason</td>
-<td>iOS</td>
-<td class="online">Online</td>
-</tr>
-
-<tr>
-<td>Galaxy S24</td>
-<td>Amy</td>
-<td>Android</td>
-<td class="online">Online</td>
-</tr>
-
-<tr>
-<td>iPad Air</td>
-<td>Tom</td>
-<td>iPadOS</td>
-<td class="offline">Offline</td>
-</tr>
-
-</table>
+資訊器材管制標籤
 
 </div>
+
+<div class="serial">
+
+C228914264
+
+</div>
+
+</div>
+
+<div class="info">
+
+上鎖時間：115/07/02 10:06:36<br>
+
+設定檔：V113.a (12/30 11:17:24)
+
+</div>
+
+<div class="red">
+
+仿冒必究
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("ios").innerHTML=
+
+"iOS:"+navigator.userAgent.match(/OS ([0-9_]+)/)?
+
+navigator.userAgent.match(/OS ([0-9_]+)/)[1].replaceAll("_","."):"";
+
+function update(){
+
+let d=new Date();
+
+let m=(d.getMonth()+1).toString().padStart(2,"0");
+
+let day=d.getDate().toString().padStart(2,"0");
+
+let h=d.getHours().toString().padStart(2,"0");
+
+let mm=d.getMinutes().toString().padStart(2,"0");
+
+let s=d.getSeconds().toString().padStart(2,"0");
+
+document.getElementById("clock").innerHTML=
+
+m+"/"+day+" "+h+":"+mm+":"+s;
+
+}
+
+update();
+
+setInterval(update,1000);
+
+</script>
 
 </body>
+
 </html>
