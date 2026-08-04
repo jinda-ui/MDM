@@ -576,17 +576,19 @@ img{
 
 /* ---------- Card Title ---------- */
 
+/* ---------- Card Title ---------- */
+
 .card-title{
 
     position:relative;
 
     z-index:2;
 
-    font-size:18px;
+    font-size:19px;
 
-    font-weight:600;
+    font-weight:500;
 
-    line-height:1.2;
+    line-height:1.15;
 
     color:#111;
 
@@ -603,13 +605,13 @@ img{
 
     z-index:2;
 
-    margin-top:2px;
+    margin-top:1px;
 
-    font-size:18px;
+    font-size:19px;
 
-    font-weight:600;
+    font-weight:500;
 
-    line-height:1.2;
+    line-height:1.15;
 
     color:#111;
 
