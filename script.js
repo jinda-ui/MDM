@@ -34,3 +34,41 @@ function formatMinguo(date){
     return `${year}/${month}/${day} ${hour}:${minute}:${second}`;
 
 }
+/* ===========================
+   即時時間
+=========================== */
+
+function updateClock(){
+
+    const now = new Date();
+
+    currentTime.textContent = formatMinguo(now);
+
+}
+
+updateClock();
+
+setInterval(updateClock,1000);
+/* ===========================
+   iOS Version
+=========================== */
+
+function updateIOS(){
+
+    let version = "iOS";
+
+    const ua = navigator.userAgent;
+
+    const match = ua.match(/OS (\d+)[._](\d+)/);
+
+    if(match){
+
+        version = `iOS:${match[1]}.${match[2]}`;
+
+    }
+
+    iosVersion.textContent = version;
+
+}
+
+updateIOS();
