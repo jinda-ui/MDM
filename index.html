@@ -3,631 +3,289 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-<title>國軍 MDM V9.1</title>
+    <title>國軍 MDM V9.1 Ultra</title>
 
-<style>
+    <meta name="theme-color" content="#000000">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;
--webkit-user-select:none;
-user-select:none;
-}
-
-html,body{
-height:100%;
-}
-
-body{
-
-background:#73d34f;
-
-overflow-x:hidden;
-
-}
-
-/*==========================
-Header
-===========================*/
-
-.top{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-right:0;
-
-height:72px;
-
-padding-top:env(safe-area-inset-top);
-
-background:#000;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-color:white;
-
-font-size:25px;
-
-font-weight:700;
-
-z-index:999;
-
-}
-
-.menu{
-
-position:absolute;
-
-left:18px;
-
-font-size:34px;
-
-cursor:pointer;
-
-}
-
-.version{
-
-position:absolute;
-
-right:14px;
-
-font-size:18px;
-
-font-weight:500;
-
-}
-
-/*==========================
-Content
-===========================*/
-
-.content{
-
-padding-top:110px;
-
-padding-bottom:60px;
-
-text-align:center;
-
-}
-
-.tip{
-
-font-size:21px;
-
-margin-top:8px;
-
-font-weight:500;
-
-}
-
-.name{
-
-font-size:112px;
-
-font-weight:700;
-
-margin-top:70px;
-
-letter-spacing:2px;
-
-}
-
-.clock{
-
-font-size:72px;
-
-font-weight:800;
-
-margin-top:70px;
-
-}
-
-/*==========================
-Buttons
-===========================*/
-
-.btn{
-
-width:86%;
-
-height:78px;
-
-margin:28px auto;
-
-background:rgba(255,255,255,.33);
-
-border-radius:18px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:35px;
-
-color:#4d73ff;
-
-backdrop-filter:blur(8px);
-
-}
-
-.dot{
-
-width:28px;
-
-height:28px;
-
-border-radius:50%;
-
-margin-right:18px;
-
-}
-
-.green{
-
-background:#59d33c;
-
-box-shadow:0 0 10px rgba(65,180,40,.8);
-
-}
-
-.red{
-
-background:#ff4545;
-
-box-shadow:0 0 10px rgba(255,0,0,.5);
-
-}
-
-/*==========================
-Card
-===========================*/
-
-.card{
-
-width:82%;
-
-margin:45px auto;
-
-padding:30px;
-
-background:#fff;
-
-border-radius:16px;
-
-border:2px solid #444;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.card::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-opacity:.12;
-
-background-image:
-radial-gradient(circle,#999 2px,transparent 2px);
-
-background-size:95px 95px;
-
-pointer-events:none;
-
-}
-
-.card-title{
-
-position:relative;
-
-z-index:2;
-
-font-size:28px;
-
-line-height:42px;
-
-}
-
-.serial{
-
-position:relative;
-
-z-index:2;
-
-font-size:64px;
-
-font-weight:800;
-
-margin-top:20px;
-
-letter-spacing:2px;
-
-}
-
-/*==========================
-Info
-===========================*/
-
-.info{
-
-font-size:28px;
-
-line-height:65px;
-
-margin-top:10px;
-
-}
-
-.fake{
-
-margin-top:10px;
-
-font-size:30px;
-
-font-weight:700;
-
-color:#e00;
-
-letter-spacing:4px;
-
-}
-
-/*==========================
-Drawer
-===========================*/
-
-.drawer{
-
-position:fixed;
-
-top:0;
-
-left:-280px;
-
-width:280px;
-
-height:100%;
-
-background:white;
-
-box-shadow:5px 0 18px rgba(0,0,0,.35);
-
-transition:.3s;
-
-z-index:1200;
-
-padding-top:90px;
-
-}
-
-.drawer.show{
-
-left:0;
-
-}
-
-.drawer h2{
-
-padding:20px;
-
-font-size:28px;
-
-border-bottom:1px solid #ddd;
-
-}
-
-.drawer a{
-
-display:block;
-
-padding:22px;
-
-font-size:24px;
-
-text-decoration:none;
-
-color:#333;
-
-border-bottom:1px solid #eee;
-
-}
-
-.overlay{
-
-position:fixed;
-
-inset:0;
-
-background:rgba(0,0,0,.4);
-
-display:none;
-
-z-index:1100;
-
-}
-
-.overlay.show{
-
-display:block;
-
-}
-
-/*==========================
-Animation
-===========================*/
-
-.btn:active{
-
-transform:scale(.98);
-
-transition:.08s;
-
-}
-
-.card{
-
-animation:fade .4s;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="drawer" id="drawer">
+    <!-- =========================
+         Header
+    ========================== -->
 
-<h2>國軍 MDM</h2>
+    <header class="topbar">
 
-<a href="#">首頁</a>
+        <button id="menuButton" class="menu-button">
 
-<a href="#">管理模式</a>
+            ☰
 
-<a href="#">設定資訊</a>
+        </button>
 
-<a href="#">版本資訊</a>
+        <div class="app-title">
 
-</div>
+            國軍 MDM V9.1
 
-<div class="overlay" id="overlay"></div>
+        </div>
 
-<div class="top">
+        <div id="iosVersion" class="ios-version">
 
-<div class="menu" id="menu">☰</div>
+            iOS
 
-國軍 MDM V9.1
+        </div>
 
-<div class="version" id="ios"></div>
+    </header>
 
-</div>
 
-<div class="content">
 
-<div class="tip">
+    <!-- =========================
+         Main
+    ========================== -->
 
-已上鎖，可進入此管制營區
+    <main class="container">
 
-</div>
 
-<div class="name">
 
-中科院
+        <!-- 狀態 -->
 
-</div>
+        <section class="status-section">
 
-<div class="clock" id="clock">
+            <div id="statusText">
 
-00/00 00:00:00
+                已上鎖，可進入此管制營區
 
-</div>
+            </div>
 
-<div class="btn">
+        </section>
 
-<div class="dot green"></div>
 
-上鎖：進入管制模式
 
-</div>
+        <!-- 單位 -->
 
-<div class="btn">
+        <section class="title-section">
 
-<div class="dot red"></div>
+            <h1 id="organizationName">
 
-解鎖：離開管制模式
+                中科院
 
-</div>
+            </h1>
 
-<div class="card">
+        </section>
 
-<div class="card-title">
 
-國軍營內民用通信<br>
 
-資訊器材管制標籤
+        <!-- 即時時間 -->
 
-</div>
+        <section class="clock-section">
 
-<div class="serial">
+            <div id="currentTime">
 
-C228914264
+                115/08/05 00:00:00
 
-</div>
+            </div>
 
-</div>
+        </section>
 
-<div class="info">
 
-上鎖時間：115/07/02 10:06:36<br>
 
-設定檔：V113.a (12/30 11:17:24)
+        <!-- 任務結束時間 -->
 
-</div>
+        <section
+            id="endTimeSection"
+            class="endtime-section">
 
-<div class="fake">
+            <div class="endtime-title">
 
-仿冒必究
+                結束時間
 
-</div>
+            </div>
 
-</div>
+            <div
+                id="endTimeValue"
+                class="endtime-value">
 
+                115/08/14 00:00
 
+            </div>
 
-<script>
+        </section>
 
-//==============================
-// iOS Version
-//==============================
 
-const match = navigator.userAgent.match(/OS (\d+[_\d]*)/);
 
-document.getElementById("ios").textContent =
-match ? "iOS:" + match[1].replaceAll("_",".") : "";
+        <!-- 上鎖 -->
 
-//==============================
-// Clock
-//==============================
+        <section class="button-section">
 
-function updateClock(){
+            <button
+                id="lockButton"
+                class="mdm-button">
 
-const d=new Date();
+                <span class="led green"></span>
 
-const month=String(d.getMonth()+1).padStart(2,"0");
+                <span>
 
-const day=String(d.getDate()).padStart(2,"0");
+                    上鎖：進入管制模式
 
-const hour=String(d.getHours()).padStart(2,"0");
+                </span>
 
-const min=String(d.getMinutes()).padStart(2,"0");
+            </button>
 
-const sec=String(d.getSeconds()).padStart(2,"0");
 
-document.getElementById("clock").textContent=
-`${month}/${day} ${hour}:${min}:${sec}`;
 
-}
+            <button
+                id="unlockButton"
+                class="mdm-button">
 
-updateClock();
+                <span class="led red"></span>
 
-setInterval(updateClock,1000);
+                <span>
 
-//==============================
-// Drawer
-//==============================
+                    解鎖：離開管制模式
 
-const drawer=document.getElementById("drawer");
-const overlay=document.getElementById("overlay");
-const menu=document.getElementById("menu");
+                </span>
 
-menu.onclick=()=>{
+            </button>
 
-drawer.classList.add("show");
-overlay.classList.add("show");
+        </section>
 
-};
 
-overlay.onclick=()=>{
 
-drawer.classList.remove("show");
-overlay.classList.remove("show");
+        <!-- 卡片 -->
 
-};
+        <section class="card-section">
 
-//==============================
-// Button Animation
-//==============================
+            <div class="control-card">
 
-document.querySelectorAll(".btn").forEach(btn=>{
+                <div class="card-watermark">
 
-btn.addEventListener("touchstart",()=>{
+                    <!-- v0.3 放 SVG -->
 
-btn.style.transform="scale(.97)";
-btn.style.transition=".08s";
+                </div>
 
-});
+                <div class="card-title">
 
-btn.addEventListener("touchend",()=>{
+                    國軍營內民用通信
 
-btn.style.transform="scale(1)";
+                </div>
 
-});
+                <div class="card-subtitle">
 
-});
+                    資訊器材管制標籤
 
-//==============================
-// Card Animation
-//==============================
+                </div>
 
-window.addEventListener("load",()=>{
+                <div
+                    id="serialNumber"
+                    class="serial-number">
 
-document.querySelector(".card").style.opacity="1";
+                    C228914264
 
-});
+                </div>
 
-//==============================
-// Optional vibration
-//==============================
+            </div>
 
-document.querySelectorAll(".btn").forEach(btn=>{
+        </section>
 
-btn.addEventListener("click",()=>{
 
-if(navigator.vibrate){
 
-navigator.vibrate(15);
+        <!-- 資訊 -->
 
-}
+        <section class="info-section">
 
-});
+            <div>
 
-});
+                上鎖時間：
 
-</script>
+                <span id="lockTime">
+
+                    115/07/02 10:06:36
+
+                </span>
+
+            </div>
+
+            <div>
+
+                設定檔：
+
+                <span id="profileVersion">
+
+                    V113.a (12/30 11:17:24)
+
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 違規模式 -->
+
+        <section
+            id="violationSection"
+            class="violation-section">
+
+            <div class="violation-title">
+
+                違規警告！
+
+            </div>
+
+            <div
+                id="violationText">
+
+                未設定
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 底部 -->
+
+        <footer class="footer">
+
+            仿冒必究
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- Drawer (v0.2) -->
+
+    <aside
+        id="drawer"
+        class="drawer">
+
+    </aside>
+
+
+
+    <!-- Overlay -->
+
+    <div
+        id="overlay"
+        class="overlay">
+
+    </div>
+
+
+
+    <script src="config.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 
