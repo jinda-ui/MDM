@@ -1,9 +1,7 @@
 /* ==========================================================
-   國軍 MDM V9.2 Ultra
-   style.css
+   國軍 MDM V9.2 Official
    Part 1 / 8
-   Reset + Safari + PWA
-   ========================================================== */
+========================================================== */
 
 /* ---------- Reset ---------- */
 
@@ -14,33 +12,22 @@
     -webkit-tap-highlight-color:transparent;
 }
 
-*::before,
-*::after{
-    box-sizing:border-box;
-}
-
 html{
 
     width:100%;
     height:100%;
 
-    font-size:16px;
-
     -webkit-text-size-adjust:100%;
     text-size-adjust:100%;
-
-    overflow-x:hidden;
-
-    background:#54D13F;
 
 }
 
 body{
 
     width:100%;
-    min-height:100dvh;
+    min-height:100vh;
 
-    background:#54D13F;
+    background:#6ED34A;
 
     color:#000;
 
@@ -49,17 +36,12 @@ body{
     font-family:
         -apple-system,
         BlinkMacSystemFont,
-        "SF Pro Display",
         "PingFang TC",
         "Microsoft JhengHei",
         sans-serif;
 
-    font-weight:500;
-
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
-
-    text-rendering:optimizeLegibility;
 
 }
 
@@ -68,53 +50,13 @@ body{
 
 body{
 
-    padding-top:env(safe-area-inset-top);
-
-    padding-left:env(safe-area-inset-left);
-
-    padding-right:env(safe-area-inset-right);
-
-    padding-bottom:env(safe-area-inset-bottom);
-
-}
-
-
-/* ---------- Safari ---------- */
-
-html,
-body{
-
-    overscroll-behavior:none;
-
-}
-
-body{
-
-    -webkit-overflow-scrolling:touch;
-
-}
-
-
-/* ---------- PWA ---------- */
-
-@supports(padding:max(0px)){
-
-body{
-
     padding-top:max(env(safe-area-inset-top),0px);
 
+    padding-left:max(env(safe-area-inset-left),0px);
+
+    padding-right:max(env(safe-area-inset-right),0px);
+
     padding-bottom:max(env(safe-area-inset-bottom),0px);
-
-}
-
-}
-
-
-/* ---------- Selection ---------- */
-
-::selection{
-
-    background:transparent;
 
 }
 
@@ -141,21 +83,17 @@ img{
 
     max-width:100%;
 
-    user-select:none;
-
-    -webkit-user-drag:none;
-
 }
 
 .hidden{
 
-    display:none !important;
+    display:none!important;
 
 }
 
 .show{
 
-    display:block !important;
+    display:block!important;
 
 }
 
@@ -167,49 +105,14 @@ img{
 
 .transition{
 
-    transition:.22s ease;
-
-}
-
-
-/* ---------- Main Container ---------- */
-
-.container{
-
-    position:relative;
-
-    width:100%;
-
-    max-width:430px;
-
-    margin:0 auto;
-
-    padding-top:72px;
-
-    padding-left:18px;
-
-    padding-right:18px;
-
-    padding-bottom:26px;
-
-}
-
-
-/* ---------- Footer ---------- */
-
-.footer{
-
-    text-align:center;
-
-    color:#FF3B30;
+    transition:.2s ease;
 
 }
 
 /* ==========================================================
    Part 2 / 8
-   Header V9.2 Ultra
-   ========================================================== */
-
+   Header
+========================================================== */
 
 /* ---------- Top Bar ---------- */
 
@@ -225,6 +128,8 @@ img{
 
     background:#000;
 
+    color:#FFF;
+
     display:flex;
 
     justify-content:center;
@@ -233,7 +138,7 @@ img{
 
     z-index:9999;
 
-    box-shadow:0 1px 6px rgba(0,0,0,.28);
+    box-shadow:0 1px 4px rgba(0,0,0,.25);
 
 }
 
@@ -244,15 +149,15 @@ img{
 
     position:absolute;
 
-    left:14px;
+    left:16px;
 
     top:50%;
 
     transform:translateY(-50%);
 
-    width:42px;
+    width:36px;
 
-    height:42px;
+    height:36px;
 
     display:flex;
 
@@ -260,25 +165,23 @@ img{
 
     align-items:center;
 
-    color:#FFF;
-
-    background:transparent;
-
-    border:none;
-
-    font-size:30px;
+    font-size:26px;
 
     font-weight:400;
 
-    border-radius:10px;
+    color:#FFF;
 
-    transition:.18s;
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
 
 }
 
 .menu-button:active{
 
-    background:rgba(255,255,255,.08);
+    opacity:.6;
 
 }
 
@@ -287,19 +190,15 @@ img{
 
 .app-title{
 
-    color:#FFF;
-
     font-size:22px;
 
-    font-weight:650;
+    font-weight:700;
 
     letter-spacing:.2px;
 
-    line-height:1;
+    color:#FFF;
 
     white-space:nowrap;
-
-    user-select:none;
 
 }
 
@@ -308,25 +207,19 @@ img{
 
 .ios-version{
 
-    position:absolute;
+    position:fixed;
 
-    top:72px;
+    top:66px;
 
     right:18px;
 
-    z-index:30;
-
-    font-size:18px;
+    font-size:17px;
 
     font-weight:500;
 
     color:#000;
 
-    line-height:1;
-
-    white-space:nowrap;
-
-    user-select:none;
+    z-index:9999;
 
 }
 
@@ -335,80 +228,26 @@ img{
 
 .container{
 
-    position:relative;
-
     width:100%;
 
-    max-width:430px;
+    max-width:390px;
 
     margin:0 auto;
 
-    padding-top:68px;
+    padding-top:74px;
 
-    padding-left:18px;
+    padding-left:16px;
 
-    padding-right:18px;
+    padding-right:16px;
 
-    padding-bottom:26px;
-
-}
-
-
-/* ---------- Responsive ---------- */
-
-@media (max-width:430px){
-
-    .topbar{
-
-        height:54px;
-
-    }
-
-    .app-title{
-
-        font-size:21px;
-
-    }
-
-    .ios-version{
-
-        top:68px;
-
-        right:16px;
-
-        font-size:17px;
-
-    }
-
-}
-
-@media (max-width:390px){
-
-    .app-title{
-
-        font-size:20px;
-
-    }
-
-    .menu-button{
-
-        left:12px;
-
-    }
-
-    .ios-version{
-
-        font-size:16px;
-
-    }
+    padding-bottom:28px;
 
 }
 
 /* ==========================================================
    Part 3 / 8
-   Status / Mission / Clock V9.2
-   ========================================================== */
-
+   Status / Mission / Title / Clock
+========================================================== */
 
 /* ---------- 一般模式 ---------- */
 
@@ -418,21 +257,21 @@ img{
 
     text-align:center;
 
-    margin-top:12px;
+    margin-top:6px;
 
-    min-height:30px;
+    min-height:26px;
 
 }
 
 .status{
 
-    font-size:22px;
+    font-size:19px;
 
     font-weight:500;
 
-    color:#000;
-
     line-height:1.25;
+
+    color:#000;
 
 }
 
@@ -441,48 +280,40 @@ img{
 
 .endtime-section{
 
-    width:100%;
-
-    margin-top:18px;
-
     display:flex;
 
     justify-content:center;
 
     align-items:center;
 
-    gap:4px;
+    gap:8px;
 
-    text-align:center;
+    margin-top:8px;
 
 }
 
 .endtime-label{
 
+    margin:0;
+
     font-size:22px;
 
     font-weight:500;
-
-    color:#000;
-
-    line-height:1;
 
 }
 
 .endtime{
 
+    margin:0;
+
     font-size:22px;
 
     font-weight:500;
 
-    color:#000;
-
-    line-height:1;
-
 }
 
 
-/* ---------- 標題 ---------- */
+/* ---------- 大標題 ---------- */
 
 .title-section{
 
@@ -490,25 +321,21 @@ img{
 
     text-align:center;
 
-    margin-top:44px;
+    margin-top:28px;
 
 }
 
 .page-title{
 
-    font-size:84px;
+    font-size:76px;
 
     font-weight:500;
 
+    line-height:1;
+
+    letter-spacing:-2px;
+
     color:#000;
-
-    line-height:.95;
-
-    letter-spacing:-2.5px;
-
-    white-space:nowrap;
-
-    user-select:none;
 
 }
 
@@ -521,23 +348,26 @@ img{
 
     text-align:center;
 
-    margin-top:54px;
+    margin-top:34px;
 
 }
 
 .clock{
 
-    font-size:58px;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    font-size:33px;
 
     font-weight:500;
 
+    line-height:1.05;
+
+    letter-spacing:-0.8px;
+
     color:#000;
-
-    line-height:.92;
-
-    letter-spacing:-1.5px;
-
-    user-select:none;
 
 }
 
@@ -546,18 +376,18 @@ img{
 
 .status-section + .title-section{
 
-    margin-top:44px;
+    margin-top:34px;
 
 }
 
 .endtime-section + .title-section{
 
-    margin-top:38px;
+    margin-top:22px;
 
 }
 
 
-/* ---------- 防止選取 ---------- */
+/* ---------- 禁止選取 ---------- */
 
 .status,
 .endtime,
@@ -569,86 +399,47 @@ img{
 
 }
 
-
-/* ---------- Responsive ---------- */
-
-@media (max-width:430px){
-
-    .page-title{
-
-        font-size:76px;
-
-    }
-
-    .clock{
-
-        font-size:54px;
-
-    }
-
-}
-
-@media (max-width:390px){
-
-    .endtime-label,
-    .endtime{
-
-        font-size:20px;
-
-    }
-
-    .page-title{
-
-        font-size:68px;
-
-        letter-spacing:-2px;
-
-    }
-
-    .clock{
-
-        font-size:48px;
-
-    }
-
-}
-
 /* ==========================================================
    Part 4 / 8
-   MDM Button V2.0
-   ========================================================== */
+   Official MDM Button
+========================================================== */
+
+/* ---------- Button Area ---------- */
 
 .button-section{
 
     width:100%;
 
-    margin-top:48px;
+    margin-top:30px;
 
 }
+
+
+/* ---------- Button ---------- */
 
 .mdm-button{
 
     width:100%;
 
-    height:82px;
+    height:58px;
 
-    margin-bottom:18px;
+    margin-bottom:14px;
 
-    padding:0 24px;
+    padding:0 22px;
 
     border:none;
 
-    border-radius:20px;
+    border-radius:16px;
 
-    background:rgba(255,255,255,.33);
+    background:rgba(255,255,255,.28);
 
     display:flex;
 
     align-items:center;
 
-    justify-content:flex-start;
-
     transition:.15s;
+
+    -webkit-tap-highlight-color:transparent;
 
 }
 
@@ -658,55 +449,54 @@ img{
 
 }
 
-/* LED */
+
+/* ---------- LED ---------- */
 
 .led{
 
-    width:18px;
+    width:14px;
 
-    height:18px;
+    height:14px;
 
-    min-width:18px;
+    min-width:14px;
 
     border-radius:50%;
 
-    margin-right:22px;
+    margin-right:18px;
 
 }
 
 .led.green{
 
-    background:#37D94F;
+    background:#61D84F;
 
 }
 
 .led.red{
 
-    background:#FF3B30;
+    background:#FF453A;
 
 }
 
-/* 文字 */
+
+/* ---------- Text ---------- */
 
 .mdm-button span:last-child{
 
-    flex:1;
-
-    text-align:center;
-
-    margin-right:40px;
-
-    font-size:28px;
+    font-size:22px;
 
     font-weight:500;
 
-    line-height:1.2;
+    color:#4B67FF;
 
-    color:#5A78FF;
+    line-height:1;
 
-    white-space:nowrap;
+    letter-spacing:0;
 
 }
+
+
+/* ---------- Disabled ---------- */
 
 .mdm-button:disabled{
 
@@ -718,8 +508,8 @@ img{
 
 /* ==========================================================
    Part 5 / 8
-   Control Card V9.2 Ultra
-   ========================================================== */
+   Official Control Card
+========================================================== */
 
 /* ---------- Card Area ---------- */
 
@@ -727,7 +517,7 @@ img{
 
     width:100%;
 
-    margin-top:30px;
+    margin-top:26px;
 
 }
 
@@ -740,11 +530,11 @@ img{
 
     width:100%;
 
-    min-height:185px;
+    height:165px;
 
     background:#FFF;
 
-    border-radius:18px;
+    border-radius:16px;
 
     border:1px solid rgba(0,0,0,.18);
 
@@ -775,41 +565,55 @@ img{
 
     background-position:center;
 
-    background-size:118px;
+    background-size:125px;
 
-    opacity:.07;
+    opacity:.45;
 
     pointer-events:none;
 
 }
 
 
-/* ---------- Card Text ---------- */
+/* ---------- Card Title ---------- */
 
-.card-title,
-.card-subtitle{
+.card-title{
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "PingFang TC",
-        sans-serif;
+    position:relative;
 
-    font-size:20px;
+    z-index:2;
+
+    font-size:18px;
 
     font-weight:600;
 
-    line-height:1.25;
-
-    text-align:center;
+    line-height:1.2;
 
     color:#111;
 
+    text-align:center;
+
 }
+
+
+/* ---------- Card Subtitle ---------- */
 
 .card-subtitle{
 
+    position:relative;
+
+    z-index:2;
+
     margin-top:2px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    line-height:1.2;
+
+    color:#111;
+
+    text-align:center;
 
 }
 
@@ -818,21 +622,17 @@ img{
 
 .serial-number{
 
-    margin-top:18px;
+    position:relative;
 
-    font-family:
-        "SF Mono",
-        "SFMono-Regular",
-        "Menlo",
-        "Roboto Mono",
-        "Consolas",
-        monospace;
+    z-index:2;
+
+    margin-top:14px;
 
     font-size:44px;
 
     font-weight:600;
 
-    letter-spacing:1.2px;
+    letter-spacing:.15px;
 
     line-height:1;
 
@@ -840,50 +640,35 @@ img{
 
     text-align:center;
 
-    -webkit-font-smoothing:antialiased;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        sans-serif;
 
 }
 
 
-/* ---------- Responsive ---------- */
-
-@media (max-width:430px){
-
-    .control-card{
-
-        min-height:175px;
-
-    }
-
-    .card-title,
-
-    .card-subtitle{
-
-        font-size:20px;
-
-    }
-
-    .serial-number{
-
-        font-size:50px;
-
-    }
-
-}
+/* ---------- Small Screen ---------- */
 
 @media (max-width:390px){
 
-    .card-title,
+    .control-card{
 
+        height:158px;
+
+    }
+
+    .card-title,
     .card-subtitle{
 
-        font-size:19px;
+        font-size:17px;
 
     }
 
     .serial-number{
 
-        font-size:46px;
+        font-size:38px;
 
     }
 
@@ -891,163 +676,14 @@ img{
 
 /* ==========================================================
    Part 6 / 8
-   Watermark + Violation Animation V9.2 Ultra
-   ========================================================== */
+   Info / Violation / Footer
+========================================================== */
 
-
-/* ===========================
-   Watermark Layer
-=========================== */
-
-.card-watermark{
-
-    position:absolute;
-
-    inset:0;
-
-    background-image:url("images/watermark.svg.jpg");
-
-    background-repeat:repeat;
-
-    background-size:118px;
-
-    background-position:center;
-
-    opacity:.08;
-
-    pointer-events:none;
-
-    user-select:none;
-
-}
-
-
-/* ===========================
-   Violation Mode
-   在 body 加上 class="violation-mode"
-   即可啟用
-=========================== */
-
-body.violation-mode{
-
-    position:relative;
-
-}
-
-
-/* ===========================
-   Red Stripe Overlay
-=========================== */
-
-body.violation-mode::before{
-
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    pointer-events:none;
-
-    z-index:9500;
-
-    opacity:.22;
-
-    background:
-        repeating-linear-gradient(
-            -45deg,
-            rgba(255,0,0,.18) 0px,
-            rgba(255,0,0,.18) 18px,
-            transparent 18px,
-            transparent 36px
-        );
-
-    animation:warningStripe 8s linear infinite;
-
-}
-
-
-/* ===========================
-   Warning Pulse
-=========================== */
-
-body.violation-mode::after{
-
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(255,0,0,.04);
-
-    pointer-events:none;
-
-    z-index:9499;
-
-    animation:warningPulse 1.8s ease-in-out infinite;
-
-}
-
-
-/* ===========================
-   Stripe Animation
-=========================== */
-
-@keyframes warningStripe{
-
-    from{
-
-        background-position:0 0;
-
-    }
-
-    to{
-
-        background-position:80px 80px;
-
-    }
-
-}
-
-
-/* ===========================
-   Pulse Animation
-=========================== */
-
-@keyframes warningPulse{
-
-    0%{
-
-        opacity:.03;
-
-    }
-
-    50%{
-
-        opacity:.09;
-
-    }
-
-    100%{
-
-        opacity:.03;
-
-    }
-
-}
-
-/* ==========================================================
-   Part 7 / 8
-   Info / Violation / Footer V9.2 Ultra
-   ========================================================== */
-
-
-/* ---------- 資訊 ---------- */
-
-/* ---------- 資訊 ---------- */
+/* ---------- Info ---------- */
 
 .info-section{
+
+    width:100%;
 
     margin-top:18px;
 
@@ -1058,22 +694,6 @@ body.violation-mode::after{
     align-items:center;
 
     gap:6px;
-
-    text-align:center;
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "SF Pro Text",
-        "PingFang TC",
-        "Microsoft JhengHei",
-        sans-serif;
-
-    font-size:17px;
-
-    font-weight:500;
-
-    color:#111;
 
 }
 
@@ -1089,22 +709,42 @@ body.violation-mode::after{
 
     width:100%;
 
+    font-size:15px;
+
+    font-weight:500;
+
+    color:#111;
+
+    line-height:1.25;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "PingFang TC",
+        sans-serif;
+
 }
 
-.info-section span{
+.info-section div{
 
-    display:inline-block;
+    display:flex;
 
-}
+    justify-content:center;
 
+    align-items:center;
 
-/* ---------- 違規項目 ---------- */
-
-.violation-section{
+    gap:4px;
 
     width:100%;
 
-    margin-top:28px;
+}
+
+
+/* ---------- Violation ---------- */
+
+.violation-section{
+
+    margin-top:20px;
 
     text-align:center;
 
@@ -1112,27 +752,24 @@ body.violation-mode::after{
 
 .violation-title{
 
-    font-size:22px;
+    font-size:18px;
 
-    font-weight:500;
+    font-weight:600;
 
-    color:#000;
+    margin-bottom:6px;
 
-    line-height:1.2;
+    color:#C00000;
 
 }
 
+.violation-items,
 #violationItems{
 
-    margin-top:8px;
-
-    font-size:20px;
+    font-size:16px;
 
     font-weight:500;
 
-    color:#C40000;
-
-    line-height:1.35;
+    color:#D60000;
 
 }
 
@@ -1141,86 +778,26 @@ body.violation-mode::after{
 
 .footer{
 
-    margin-top:42px;
-
-    margin-bottom:8px;
+    margin-top:24px;
 
     text-align:center;
 
-    font-size:20px;
+    font-size:16px;
 
-    font-weight:500;
+    font-weight:600;
 
     color:#FF3B30;
 
-    letter-spacing:.4px;
-
-    user-select:none;
-
-}
-
-
-/* ---------- Responsive ---------- */
-
-@media (max-width:430px){
-
-    .info-section div{
-
-        font-size:18px;
-
-    }
-
-    .violation-title{
-
-        font-size:20px;
-
-    }
-
-    #violationItems{
-
-        font-size:18px;
-
-    }
-
-    .footer{
-
-        font-size:18px;
-
-    }
-
-}
-
-@media (max-width:390px){
-
-    .info-section{
-
-        gap:10px;
-
-    }
-
-    .info-section div{
-
-        font-size:17px;
-
-    }
-
-    #violationItems{
-
-        font-size:17px;
-
-    }
+    letter-spacing:.5px;
 
 }
 
 /* ==========================================================
-   Part 8 / 8
-   Drawer / Overlay / Responsive V9.2 Ultra
-   ========================================================== */
+   Part 7 / 8
+   Drawer / Overlay / Responsive
+========================================================== */
 
-
-/* ===========================
-   Drawer
-=========================== */
+/* ---------- Drawer ---------- */
 
 .drawer{
 
@@ -1228,25 +805,21 @@ body.violation-mode::after{
 
     top:0;
 
-    left:-300px;
+    left:-280px;
 
     width:280px;
 
-    max-width:82%;
-
     height:100vh;
 
-    background:#FFFFFF;
+    background:#FFF;
 
-    box-shadow:3px 0 22px rgba(0,0,0,.18);
+    box-shadow:2px 0 18px rgba(0,0,0,.18);
 
-    transition:left .28s ease;
+    transition:left .25s ease;
 
     z-index:10000;
 
     overflow-y:auto;
-
-    -webkit-overflow-scrolling:touch;
 
 }
 
@@ -1257,13 +830,11 @@ body.violation-mode::after{
 }
 
 
-/* ===========================
-   Drawer Header
-=========================== */
+/* ---------- Drawer Header ---------- */
 
 .drawer-header{
 
-    height:72px;
+    height:60px;
 
     background:#000;
 
@@ -1275,16 +846,14 @@ body.violation-mode::after{
 
     align-items:center;
 
-    font-size:23px;
+    font-size:22px;
 
-    font-weight:600;
+    font-weight:700;
 
 }
 
 
-/* ===========================
-   Drawer Menu
-=========================== */
+/* ---------- Drawer Menu ---------- */
 
 .drawer-menu{
 
@@ -1298,19 +867,17 @@ body.violation-mode::after{
 
     align-items:center;
 
-    gap:16px;
+    gap:14px;
 
-    height:56px;
+    padding:15px 20px;
 
-    padding:0 20px;
-
-    font-size:19px;
+    font-size:18px;
 
     font-weight:500;
 
     color:#111;
 
-    transition:.18s;
+    transition:.2s;
 
     cursor:pointer;
 
@@ -1330,35 +897,37 @@ body.violation-mode::after{
 
 .drawer-icon{
 
-    width:28px;
+    width:24px;
 
     text-align:center;
-
-    font-size:22px;
 
 }
 
 
-/* ===========================
-   Drawer Footer
-=========================== */
+/* ---------- Drawer Footer ---------- */
 
 .drawer-footer{
 
-    padding:24px 0;
+    position:absolute;
+
+    bottom:20px;
+
+    left:0;
+
+    right:0;
 
     text-align:center;
 
-    font-size:15px;
+    font-size:13px;
 
     color:#888;
+
+    line-height:1.4;
 
 }
 
 
-/* ===========================
-   Overlay
-=========================== */
+/* ---------- Overlay ---------- */
 
 .overlay{
 
@@ -1366,17 +935,15 @@ body.violation-mode::after{
 
     inset:0;
 
-    background:rgba(0,0,0,.30);
-
-    backdrop-filter:blur(1px);
+    background:rgba(0,0,0,.28);
 
     opacity:0;
 
     visibility:hidden;
 
-    transition:.25s;
+    transition:.2s;
 
-    z-index:9999;
+    z-index:9998;
 
 }
 
@@ -1389,13 +956,11 @@ body.violation-mode::after{
 }
 
 
-/* ===========================
-   Fade
-=========================== */
+/* ---------- Animation ---------- */
 
 .fade{
 
-    animation:fade .25s ease;
+    animation:fade .2s ease;
 
 }
 
@@ -1420,39 +985,15 @@ body.violation-mode::after{
 }
 
 
-/* ===========================
-   Responsive
-=========================== */
+/* ==========================================================
+   iPhone Responsive
+========================================================== */
 
 @media (max-width:430px){
 
     .container{
 
         max-width:390px;
-
-        padding-left:18px;
-
-        padding-right:18px;
-
-    }
-
-}
-
-@media (max-width:390px){
-
-    .container{
-
-        padding-left:16px;
-
-        padding-right:16px;
-
-    }
-
-}
-
-@media (max-width:375px){
-
-    .container{
 
         padding-left:14px;
 
@@ -1462,17 +1003,51 @@ body.violation-mode::after{
 
 }
 
+@media (max-width:390px){
 
-/* ===========================
-   PWA Full Screen
-=========================== */
+    .page-title{
 
-@media (display-mode: standalone){
-
-    body{
-
-        overscroll-behavior:none;
+        font-size:68px;
 
     }
+
+    .clock{
+
+        font-size:30px;
+
+    }
+
+    .serial-number{
+
+        font-size:36px;
+
+    }
+
+    .mdm-button{
+
+        height:56px;
+
+    }
+
+    .mdm-button span:last-child{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/* ---------- Safari ---------- */
+
+html{
+
+    -webkit-text-size-adjust:100%;
+
+}
+
+body{
+
+    overscroll-behavior:none;
 
 }
