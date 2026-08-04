@@ -27,7 +27,7 @@ body{
     width:100%;
     min-height:100vh;
 
-    background:#6ED34A;
+    background:rgb(108,213,62);
 
     color:#000;
 
@@ -542,11 +542,23 @@ img{
 /* ---------- Watermark ---------- */
 
 .card-watermark{
+
     position:absolute;
+
     inset:0;
-    background:url("images/watermark.png.PNG") center/cover no-repeat;
+
+    background-image:url("images/watermark.PNG");
+
+    background-repeat:repeat;
+
+    background-position:center;
+
+    background-size:125px;
+
     opacity:.45;
+
     pointer-events:none;
+
 }
 
 
