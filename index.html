@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
 
     <meta name="viewport"
-          content="width=device-width,initial-scale=1,viewport-fit=cover">
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <title>國軍 MDM V9.1 Ultra</title>
 
@@ -52,102 +52,17 @@
 
     <main class="container">
 
+        <!-- 一般模式 -->
 
-<!-- =========================
-     Normal Mode Status
-========================== -->
+        <section
+            id="statusSection"
+            class="status-section">
 
-<section
-    id="statusSection"
-    class="status-section">
+            <div
+                id="statusText"
+                class="status">
 
-    <div
-        id="statusText"
-        class="status">
-
-        已上鎖，可進入此管制營區
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     Mission End Time
-========================== -->
-
-<section
-    id="endTimeSection"
-    class="endtime-section hidden">
-
-    <div class="endtime-label">
-
-        結束時間
-
-    </div>
-
-    <div
-        id="endTimeValue"
-        class="endtime">
-
-        115/08/14 00:00
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     Page Title
-========================== -->
-
-<section
-    id="titleSection"
-    class="title-section">
-
-    <h1
-        id="pageTitle"
-        class="page-title">
-
-        中科院
-
-    </h1>
-
-</section>
-
-
-
-<!-- =========================
-     Clock
-========================== -->
-
-<section
-    id="clockSection"
-    class="clock-section">
-
-    <div
-        id="currentTime"
-        class="clock">
-
-        115/08/05 00:00:00
-
-    </div>
-
-
-
-        </section>
-
-
-
-        <!-- 即時時間 -->
-
-        <section class="clock-section">
-
-            <div id="currentTime">
-
-                115/08/05 00:00:00
+                已上鎖，可進入此管制營區
 
             </div>
 
@@ -155,13 +70,13 @@
 
 
 
-        <!-- 任務結束時間 -->
+        <!-- 任務模式 -->
 
         <section
             id="endTimeSection"
-            class="endtime-section">
+            class="endtime-section hidden">
 
-            <div class="endtime-title">
+            <div class="endtime-label">
 
                 結束時間
 
@@ -169,7 +84,7 @@
 
             <div
                 id="endTimeValue"
-                class="endtime-value">
+                class="endtime">
 
                 115/08/14 00:00
 
@@ -179,7 +94,43 @@
 
 
 
-        <!-- 上鎖 -->
+        <!-- 標題 -->
+
+        <section
+            id="titleSection"
+            class="title-section">
+
+            <h1
+                id="pageTitle"
+                class="page-title">
+
+                中科院
+
+            </h1>
+
+        </section>
+
+
+
+        <!-- 時鐘 -->
+
+        <section
+            id="clockSection"
+            class="clock-section">
+
+            <div
+                id="currentTime"
+                class="clock">
+
+                115/08/05 00:00:00
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 按鈕 -->
 
         <section class="button-section">
 
@@ -217,7 +168,7 @@
 
 
 
-        <!-- 卡片 -->
+        <!-- 管制卡 -->
 
         <section class="card-section">
 
@@ -225,7 +176,7 @@
 
                 <div class="card-watermark">
 
-                    <!-- v0.3 放 SVG -->
+                    <!-- SVG 浮水印預留 -->
 
                 </div>
 
@@ -287,28 +238,29 @@
 
 
 
+        <!-- 違規項目 -->
+
         <section
-    id="violationSection"
-    class="violation-section hidden">
+            id="violationSection"
+            class="violation-section hidden">
 
-    <div class="violation-title">
+            <div class="violation-title">
 
-        違規項目
+                違規項目
 
-    </div>
+            </div>
 
-    <div
-        id="violationItems">
+            <div id="violationItems">
 
-        通知聲音、通知
+                通知聲音、通知
 
-    </div>
+            </div>
 
-</section>
-
+        </section>
 
 
-        <!-- 底部 -->
+
+        <!-- Footer -->
 
         <footer class="footer">
 
@@ -320,7 +272,7 @@
 
 
 
-    <!-- Drawer (v0.2) -->
+    <!-- Drawer -->
 
     <aside
         id="drawer"
