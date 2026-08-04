@@ -17,10 +17,10 @@ const CONFIG = {
     violation: false,
 
     /* 任務名稱 */
-    title: "中科院",
+    title: "任務模式",
 
     /* 任務結束時間 */
-    endTime: "115/08/14 00:00",
+    endTime: "115/08/14 12:00",
 
     /* 上鎖時間 */
     lockTime: "115/07/02 10:06:36",
