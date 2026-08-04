@@ -330,7 +330,7 @@ img{
 
     font-size:46px;
 
-    font-weight:700;
+    font-weight:600;
 
     line-height:1;
 
@@ -355,7 +355,7 @@ img{
 
     font-size:102px;
 
-    font-weight:700;
+    font-weight:600;
 
     color:#000;
 
@@ -384,7 +384,7 @@ img{
 
     font-size:66px;
 
-    font-weight:700;
+    font-weight:600;
 
     color:#000;
 
@@ -715,7 +715,7 @@ img{
 
     background-position:center;
 
-    opacity:.12;
+    opacity:.55;
 
     pointer-events:none;
 
