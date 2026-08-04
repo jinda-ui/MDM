@@ -124,7 +124,7 @@ img{
     left:0;
     right:0;
 
-    height:54px;
+    height:60px;
 
     background:#000;
 
@@ -214,17 +214,15 @@ img{
 
 .ios-version{
 
-    position:absolute;
+    position:fixed;
 
-    top:74px;
+    top:66px;
 
     right:18px;
     
-    z-index:20;
+    z-index:99999;
 
     font-size:18px;
-
-    font-weight:500;
 
     color:#000;
 
@@ -237,7 +235,7 @@ img{
     
     width:100%;
 
-    max-width:430px;
+    max-width:390px;
 
     margin:0 auto;
 
@@ -256,7 +254,7 @@ img{
 
 .container section{
 
-    width:80%;
+    width:100%;
 
 }
 
@@ -306,7 +304,7 @@ img{
 
 .endtime-section{
 
-    width:70%;
+    width:100%;
 
     text-align:center;
 
@@ -328,7 +326,7 @@ img{
 
     margin-top:8px;
 
-    font-size:12px;
+    font-size:28px;
 
     font-weight:500;
 
@@ -353,7 +351,7 @@ img{
 
 .page-title{
 
-    font-size:72px;
+    font-size:96px;
 
     font-weight:500;
 
@@ -707,7 +705,7 @@ img{
 
     inset:0;
 
-    background-image:url("images/watermark.svg.jgp");
+    background-image:url("images/watermark.svg.jpg");
 
     background-repeat:repeat;
 
