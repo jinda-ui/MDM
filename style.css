@@ -544,7 +544,7 @@ img{
 .card-watermark{
     position:absolute;
     inset:0;
-    background:url("images/watermark.png.jpg") center/cover no-repeat;
+    background:url("images/watermark.png.PNG") center/cover no-repeat;
     opacity:.45;
     pointer-events:none;
 }
