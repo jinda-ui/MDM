@@ -451,7 +451,7 @@ img{
     width:12px;
     height:12px;
     min-width:12px;
-
+    border-radius:50%;
     margin-right:16px;
 
 }
@@ -510,7 +510,7 @@ img{
 
 /* ---------- Card ---------- */
 
-..control-card{
+.control-card{
 
     position:relative;
 
@@ -559,9 +559,25 @@ img{
 
     pointer-events:none;
 
+}/* ---------- Card title ---------- */
+
+.card-title{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:19px;
+
+    font-weight:500;
+
+    line-height:1.15;
+
+    color:#111;
+
+    text-align:center;
+
 }
-
-
 /* ---------- Card Subtitle ---------- */
 
 .card-subtitle{
