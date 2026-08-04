@@ -542,64 +542,11 @@ img{
 /* ---------- Watermark ---------- */
 
 .card-watermark{
-
     position:absolute;
-
     inset:0;
-
-    pointer-events:none;
-
+    background:url("images/watermark.png.jpg") center/cover no-repeat;
     opacity:.45;
-
-    background-image:
-        url("images/watermark.svg.jpg"),
-        url("images/watermark.svg.jpg"),
-        url("images/watermark.svg.jpg"),
-        url("images/watermark.svg.jpg"),
-        url("images/watermark.svg.jpg"),
-        url("images/watermark.svg.jpg");
-
-    background-repeat:no-repeat;
-
-    background-size:
-        62px 62px,
-        62px 62px,
-        62px 62px,
-        62px 62px,
-        62px 62px,
-        62px 62px;
-
-    background-position:
-        left 12px top 12px,
-        center top 12px,
-        right 12px top 12px,
-        left 12px bottom 12px,
-        center bottom 12px,
-        right 12px bottom 12px;
-
-}
-
-
-/* ---------- Card Title ---------- */
-
-/* ---------- Card Title ---------- */
-
-.card-title{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:19px;
-
-    font-weight:500;
-
-    line-height:1.15;
-
-    color:#111;
-
-    text-align:center;
-
+    pointer-events:none;
 }
 
 
