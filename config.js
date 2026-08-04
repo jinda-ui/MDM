@@ -11,7 +11,7 @@ const CONFIG = {
        normal  = 一般模式
        mission = 任務模式
     */
-    mode: "normal",
+    mode: "mission",
 
     /* 是否違規 */
     violation: false,
