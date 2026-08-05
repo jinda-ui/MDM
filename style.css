@@ -419,20 +419,20 @@ img{
 
 .mdm-button{
 
-    width:100%;
-    max-width:320px;
+    width:92%;
 
-    height:46px;
+    height:42px;          /* 原本52px */
 
-    margin:0 auto 10px;
+    margin:0 auto 12px;
 
-    padding:0 14px;
+    padding:0 18px;       /* 左右維持 */
 
-    border-radius:12px;
+    border-radius:12px;   /* 可一起改小 */
 
     background:rgba(255,255,255,.28);
 
     display:flex;
+
     align-items:center;
 
 }
@@ -901,11 +901,6 @@ img{
 
     }
 
-    .mdm-button{
-
-        height:56px;
-
-    }
 
     .mdm-button span:last-child{
 
