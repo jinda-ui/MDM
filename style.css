@@ -419,14 +419,21 @@ img{
 
 .mdm-button{
 
-    width:90%;
-    height:44px;      /* 原本52 */
+    width:100%;
+    max-width:320px;
 
-    padding:0 14px;   /* 原本18 */
+    height:46px;
+
+    margin:0 auto 10px;
+
+    padding:0 14px;
 
     border-radius:12px;
 
-    margin:0 auto 10px;
+    background:rgba(255,255,255,.28);
+
+    display:flex;
+    align-items:center;
 
 }
 
