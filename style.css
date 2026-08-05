@@ -419,21 +419,14 @@ img{
 
 .mdm-button{
 
-    width:92%;
+    width:90%;
+    height:44px;      /* 原本52 */
 
-    height:46px;          /* 原本 52px */
+    padding:0 14px;   /* 原本18 */
+
+    border-radius:12px;
 
     margin:0 auto 10px;
-
-    padding:0 16px;       /* 原本 18px */
-
-    border-radius:12px;   /* 原本 14px */
-
-    background:rgba(255,255,255,.28);
-
-    display:flex;
-
-    align-items:center;
 
 }
 
@@ -486,10 +479,7 @@ img{
 
 .mdm-button:disabled{
 
-    background:rgba(255,255,255,.16);
-
     pointer-events:none;
-
     cursor:default;
 
 }
@@ -502,7 +492,7 @@ img{
 
 .mdm-button:disabled .led{
 
-    opacity:.45;
+    opacity:1;
 
 }
 
