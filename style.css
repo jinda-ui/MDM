@@ -516,7 +516,7 @@ img{
 
     width:86%;
 
-    height:160px;
+    height:210px;
 
     margin:0 auto;
 
@@ -548,7 +548,7 @@ img{
 
     background:url("images/IMG_2362.png") center center no-repeat;
 
-    background-size:85% 85%;
+    background-size:52px;
 
     opacity:.55;
 
@@ -558,66 +558,49 @@ img{
 
 /* ---------- Card title ---------- */
 
-.card-title{
-
-    position:relative;
-    z-index:2;
-
-    font-size:24px;
-    font-weight:600;
-    line-height:1.1;
-
-    color:#111;
-    text-align:center;
-
-}
 
 /* ---------- Card Subtitle ---------- */
 
+.card-title,
 .card-subtitle{
 
     position:relative;
     z-index:2;
 
-    margin-top:4px;
-
-    font-size:24px;
-    font-weight:600;
-    line-height:1.1;
+    font-size:31px;
+    font-weight:700;
+    line-height:1.02;
+    letter-spacing:-0.5px;
 
     color:#111;
     text-align:center;
 
 }
 
+.card-subtitle{
+
+    margin-top:2px;
+
+}
 
 /* ---------- Serial ---------- */
 
 .serial-number{
 
     position:relative;
-
     z-index:2;
 
-    margin-top:10px;
+    margin-top:14px;
 
-    font-size:44px;
+    font-size:50px;
 
-    font-weight:600;
+    font-weight:700;
 
     letter-spacing:.15px;
-
     line-height:1;
 
     color:#000;
-
     text-align:center;
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Helvetica Neue",
-        sans-serif;
 
 }
 
@@ -655,15 +638,20 @@ img{
 }
 
     .card-title,
+
     .card-subtitle{
 
-        font-size:17px;
+        font-size:28px;
+
+        font-weight:700;
+
+        line-height:1.05;
 
     }
 
     .serial-number{
 
-        font-size:38px;
+        font-size:48px;
 
     }
 
