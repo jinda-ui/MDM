@@ -30,6 +30,9 @@ const CONFIG = {
 
     /* 設定檔版本 */
     profile: "V113.a (12/30 11:17:24)",
+    
+    /* iOS版本 */
+    iosVersion: "26.0",
 
     /* 違規項目 */
     violationItems: [
