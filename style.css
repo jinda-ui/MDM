@@ -546,14 +546,44 @@ img{
     position:absolute;
     inset:0;
 
-    background:url("images/IMG_2362.png") center center no-repeat;
-
-    background-size:85% 85%;
-
-    opacity:.55;
-
     pointer-events:none;
+    opacity:.22;
 
+    background-image:
+        url("images/IMG_2373.png"),
+        url("images/IMG_2373.png"),
+        url("images/IMG_2373.png"),
+        url("images/IMG_2373.png"),
+        url("images/IMG_2373.png"),
+        url("images/IMG_2373.png"),
+        url("images/IMG_2373.png"),
+        url("images/IMG_2373.png");
+
+    background-repeat:
+        no-repeat,no-repeat,no-repeat,no-repeat,
+        no-repeat,no-repeat,no-repeat,no-repeat;
+
+    background-size:
+        66px,
+        66px,
+        66px,
+        66px,
+        66px,
+        66px,
+        66px,
+        66px;
+
+    background-position:
+        left 14px top 10px,
+        center top 10px,
+        right 14px top 10px,
+
+        left 62px center,
+        right 62px center,
+
+        left 14px bottom 10px,
+        center bottom 10px,
+        right 14px bottom 10px;
 }
 
 /* ---------- Card title ---------- */
@@ -567,10 +597,16 @@ img{
     position:relative;
     z-index:2;
 
+    font-family:
+        "DFKai-SB",
+        "BiauKai",
+        "標楷體",
+        serif;
+
     font-size:31px;
     font-weight:400;
-    line-height:1.02;
-    letter-spacing:-0.5px;
+    line-height:1.15;
+    letter-spacing:0;
 
     color:#111;
     text-align:center;
@@ -579,7 +615,7 @@ img{
 
 .card-subtitle{
 
-    margin-top:8px;
+    margin-top:2px;
 
 }
 
