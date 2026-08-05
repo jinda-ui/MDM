@@ -561,19 +561,6 @@ img{
 
 }
 
-
-/* ---------- Small Screen ---------- */
-
-@media (max-width:390px){
-
-    .serial-number{
-
-        font-size:35px;
-
-    }
-
-}
-
 /* ==========================================================
    Part 6 / 8
    Info / Violation / Footer
