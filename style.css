@@ -421,13 +421,13 @@ img{
 
     width:92%;
 
-    height:52px;
+    height:46px;          /* 原本 52px */
 
-    margin:0 auto 12px;
+    margin:0 auto 10px;
 
-    padding:0 18px;
+    padding:0 16px;       /* 原本 18px */
 
-    border-radius:14px;
+    border-radius:12px;   /* 原本 14px */
 
     background:rgba(255,255,255,.28);
 
@@ -486,9 +486,23 @@ img{
 
 .mdm-button:disabled{
 
-    opacity:.45;
+    background:rgba(255,255,255,.16);
 
     pointer-events:none;
+
+    cursor:default;
+
+}
+
+.mdm-button:disabled span:last-child{
+
+    color:#8E8E93;     /* iOS 灰字 */
+
+}
+
+.mdm-button:disabled .led{
+
+    opacity:.45;
 
 }
 
