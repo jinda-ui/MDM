@@ -114,7 +114,7 @@ function updateMode(){
 
         // 一般模式
         statusSection.classList.add("hidden");
-        endTimeSection.classList.add("hidden");
+        endTimeSection.classList.remove("hidden");
 
     }
 
