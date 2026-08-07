@@ -104,15 +104,12 @@ function updateMode(){
     if(CONFIG.mode === "mission"){
 
         statusSection.classList.add("hidden");
-
         endTimeSection.classList.remove("hidden");
 
-    }
+    }else{
 
-    else{
-
-        statusSection.classList.remove("hidden");
-
+        // 一般模式
+        statusSection.classList.add("hidden");
         endTimeSection.classList.add("hidden");
 
     }
