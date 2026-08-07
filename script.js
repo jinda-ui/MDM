@@ -61,6 +61,8 @@ const endTimeSection = document.getElementById("endTimeSection");
 
 const pageTitle = document.getElementById("pageTitle");
 
+const statusText = document.getElementById("statusText");
+
 const endTimeValue = document.getElementById("endTimeValue");
 
 const serialNumber = document.getElementById("serialNumber");
@@ -80,6 +82,8 @@ const violationItems = document.getElementById("violationItems");
 function loadConfig(){
 
     pageTitle.textContent = CONFIG.title;
+    
+    statusText.textContent = CONFIG.status;
 
     endTimeValue.textContent = CONFIG.endTime;
 
