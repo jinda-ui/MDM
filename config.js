@@ -11,13 +11,13 @@ const CONFIG = {
        normal  = 一般模式
        mission = 任務模式
     */
-    mode: "mission",
+    mode: "normal",
 
     /* 是否違規 */
     violation: false,
 
     /* 任務名稱 */
-    title: "任務模式",
+    title: "586旅",
 
     /* 任務結束時間 */
     endTime: "115/08/14 12:00",
