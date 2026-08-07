@@ -7,7 +7,7 @@
 "use strict";
 
 /* ===========================
-   DOM
+   DOM 
 =========================== */
 
 const currentTime = document.getElementById("currentTime");
