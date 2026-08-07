@@ -422,27 +422,12 @@ img{
 .mdm-button{
 
     width:92%;
-
     height:38px;
 
-    margin:0 auto 10px;
-
-    padding:0 14px;
-
-    border-radius:10px;
-
-    background:#BDE8B8;
-
-    display:flex;
-
-    align-items:center;
-
-    appearance:none;
-    -webkit-appearance:none;
-
-    min-height:0;
+    padding:0 18px 0 20px;
 
 }
+
 
 .mdm-button:active{
 
@@ -459,9 +444,7 @@ img{
     height:10px;
     min-width:10px;
 
-    border-radius:50%;
-
-    margin-right:12px;
+    margin-right:18px;
 
 }
 
