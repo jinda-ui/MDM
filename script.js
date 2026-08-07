@@ -113,8 +113,8 @@ function updateMode(){
     }else{
 
         // 一般模式
-        statusSection.classList.add("hidden");
-        endTimeSection.classList.remove("hidden");
+        statusSection.classList.remove("hidden");
+        endTimeSection.classList.add("hidden");
 
     }
 
