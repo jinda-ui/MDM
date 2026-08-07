@@ -11,13 +11,13 @@ const CONFIG = {
        normal  = 一般模式
        mission = 任務模式
     */
-    mode: "normal",
+    mode: "mission",
 
     /* 是否違規 */
     violation: false,
 
     /* 任務名稱 */
-    title: "586旅",
+    title: "任務模式",
     
     /* 一般模式文字 */
     status: "已上鎖，可進入此管制營區",
